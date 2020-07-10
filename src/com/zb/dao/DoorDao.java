@@ -30,7 +30,6 @@ public class DoorDao {
         System.out.println(list);
         DBUtils.close(conn);
         return list;
-
     }
 
     public void addDoor(Door door) throws SQLException {
