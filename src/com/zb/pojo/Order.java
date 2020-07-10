@@ -2,7 +2,7 @@ package com.zb.pojo;
 
 public class Order {
     private Integer id;
-    private Integer door_id;
+    private Integer order_id;
     private String order_no;
     private String order_type;
     private Integer pnum;
@@ -20,12 +20,12 @@ public class Order {
         this.id = id;
     }
 
-    public Integer getDoor_id() {
-        return door_id;
+    public Integer getOrder_id() {
+        return order_id;
     }
 
-    public void setDoor_id(Integer door_id) {
-        this.door_id = door_id;
+    public void setOrder_id(Integer order_id) {
+        this.order_id = order_id;
     }
 
     public String getOrder_no() {
@@ -96,7 +96,7 @@ public class Order {
     public String toString() {
         return "Order{" +
                 "id=" + id +
-                ", door_id=" + door_id +
+                ", order_id=" + order_id +
                 ", order_no='" + order_no + '\'' +
                 ", order_type='" + order_type + '\'' +
                 ", pnum=" + pnum +

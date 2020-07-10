@@ -50,25 +50,46 @@
 		</tr>
 
 	<!-- 模版数据 -->
-	<tr>
-			<td>1</td>
-			<td>永和大王(西直门店)</td>
-			<td>P001</td>
-			<td>堂食</td>
-			<td>1</td>
-			<td>张三</td>
-			<td>
-				2018-04-26 14:49:07
-				<%-- 
-				<fmt:formatDate value="${order.orderTime}"
-							pattern="yyyy-MM-dd HH:mm:ss" />
-				 --%>
-			</td>
-			<td>
-				2018-04-26 14:49:07
-			</td>
-			<td>微支付</td>
-			<td>16.0</td>
+	<%--<tr>--%>
+			<%--<td>1</td>--%>
+			<%--<td>永和大王(西直门店)</td>--%>
+			<%--<td>P001</td>--%>
+			<%--<td>堂食</td>--%>
+			<%--<td>1</td>--%>
+			<%--<td>张三</td>--%>
+			<%--<td>--%>
+				<%--2018-04-26 14:49:07--%>
+				<%--&lt;%&ndash; --%>
+				<%--<fmt:formatDate value="${order.orderTime}"--%>
+							<%--pattern="yyyy-MM-dd HH:mm:ss" />--%>
+				 <%--&ndash;%&gt;--%>
+			<%--</td>--%>
+			<%--<td>--%>
+				<%--2018-04-26 14:49:07--%>
+			<%--</td>--%>
+			<%--<td>微支付</td>--%>
+			<%--<td>16.0</td>--%>
+			<%--<td>--%>
+				<%--<a href="orderDelete?id=">删除</a>--%>
+				<%--&nbsp;|&nbsp;--%>
+				<%--<a href="orderInfo?id=">修改</a>--%>
+			<%--</td>--%>
+		<%--</tr>--%>
+
+		<c:forEach items="${list}" var="order" varStatus="status">
+
+		</c:forEach>
+		<tr>
+			<td>${status.count}</td>
+			<td>${order.order_id}</td>
+			<td>${order.order_no}</td>
+			<td>${order.order_type}</td>
+			<td>${order.pnum}</td>
+			<td>${order.cashier}</td>
+			<td>${order.order_time}</td>
+			<td>${order.pay_time}</td>
+			<td>${order.pay_type}</td>
+			<td>${order.price}</td>
 			<td>
 				<a href="orderDelete?id=">删除</a>
 				&nbsp;|&nbsp;

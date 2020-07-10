@@ -21,7 +21,7 @@ public class OrderDao {
         while (rs.next()){
             order = new Order();
             order.setId(rs.getInt("id"));
-            order.setDoor_id(rs.getInt("door_id"));
+            order.setOrder_id(rs.getInt("order_id"));
             order.setOrder_no(rs.getString("order_no"));
             order.setOrder_type(rs.getString("order_type"));
             order.setPnum(rs.getInt("pnum"));
