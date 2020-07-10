@@ -16,6 +16,6 @@ public class DoorDeleteServlet extends HttpServlet {
         Integer id = Integer.parseInt(request.getParameter("id"));
         DoorDao doorDao = new DoorDao();
         doorDao.deleteById(id);
-        response.sendRedirect("/doorList");
+        response.sendRedirect(""+request.getContextPath()+"/doorList");
     }
 }
